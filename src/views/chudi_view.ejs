@@ -1,0 +1,160 @@
+<%-  include('partials/_header'); %>
+<%-  include('partials/_navbar'); %>
+            <!-- Nav -->
+            <ul class="nav nav-tabs mt-4 overflow-x border-0">
+                <li class="nav-item ">
+                    <a href="/ %>" class="nav-link font-regular">All files</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/blouseview %>" class="nav-link font-regular">Blouse</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Chudiview %>" class="nav-link active">Chudi</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- Main -->
+<main class="py-6 bg-surface-secondary">
+    <div class="container-fluid">
+        <div class="card shadow border-0 mb-7">
+            <div class="card-header">
+                <h5 class="mb-0">Chudi Details</h5>
+            </div>
+            <div class="table-responsive">
+                <div class="card-header">
+                    <h6 class="mb-0">Top Size</h6>
+                </div>
+                <table class="table table-hover table-nowrap table-sm">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Order no.</th>
+                            <th scope="col">height</th>
+                            <th scope="col">frontpointcenter</th>
+                            <th scope="col">bodyloose</th>
+                            <th scope="col">hiploose</th>
+                            <th scope="col">firstlowhipheight</th>
+                            <th scope="col">firstlowhiploose</th>
+                            <th scope="col">bottomopenfromtop</th>
+                            <th scope="col">secondlowhiploose</th>
+                            <th scope="col">frontneckheight</th>
+                            <th scope="col">backneckheight</th>
+                            <th scope="col">handheight</th>
+                            <th scope="col">middlehandloose</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (data2) { %>
+                            <% for(var i = 0; i < data2.length; i++) { %>
+                        <tr>
+                            <td>
+                                <a class="text-heading font-semibold" href="#">
+                                    <%= data2[i].orderId %>
+                                </a>
+                            </td>
+                            <td>
+                                <%= data2[i].height %>
+                            </td>
+                            <td>
+                                <%= data2[i].frontpointcenter %>
+                            </td>
+                            <td>
+                                <%= data2[i].bodyloose %>
+                            </td>
+                            <td>
+                                <%= data2[i].hiploose %>
+                            </td>
+                            <td>
+                                <%= data2[i].firstlowhipheight %>
+                            </td>
+                            <td>
+                                <%= data2[i].firstlowhiploose %>
+                            </td>
+                            <td>
+                                <%= data2[i].bottomopenfromtop %>
+                            </td>
+                            <td>
+                                <%= data2[i].secondlowhiploose %>
+                            </td>
+                            <td>
+                                <%= data2[i].frontneckheight %>
+                            </td>
+                            <td>
+                                <%= data2[i].backneckheight %>
+                            </td>
+                            <td>
+                                <%= data2[i].handheight %>
+                            </td>
+                            <td>
+                                <%= data2[i].middlehandloose %>
+                            </td>
+                            <td class="text-end">
+                                <a href="/update2/<%= data2[i].orderId %>" class="btn btn-sm btn-neutral"><i class="bi bi-pencil"></i></a>
+                                <a href="/delete2/<%= data2[i].orderId %>" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+                                
+                            </td>
+                        </tr>
+                        <% } %>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <div class="card-header">
+                    <h6 class="mb-0">Pant Size</h6>
+                </div>
+                <table class="table table-hover table-nowrap table-sm">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Order no.</th>
+                            <th scope="col">pantheight</th>
+                            <th scope="col">seatloose</th>
+                            <th scope="col">bottomloose</th>
+                            <th scope="col">bodytokneeheight</th>
+                            <th scope="col">kneeloose</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (data2) { %>
+                            <% for(var i = 0; i < data2.length; i++) { %>
+                        <tr>
+                            <td>
+                                <a class="text-heading font-semibold" href="#">
+                                    <%= data2[i].orderId %>
+                                </a>
+                            </td>
+                            <td>
+                                <%= data2[i].pantheight %>
+                            </td>
+                            <td>
+                                <%= data2[i].seatloose %>
+                            </td>
+                            <td>
+                                <%= data2[i].bottomloose %>
+                            </td>
+                            <td>
+                                <%= data2[i].bodytokneeheight %>
+                            </td>
+                            <td>
+                                <%= data2[i].kneeloose %>
+                            </td>
+
+                            <td class="text-end">
+                                <a href="/update2/<%= data2[i].orderId %>" class="btn btn-sm btn-neutral"><i class="bi bi-pencil"></i></a>
+                                <a href="/delete2/<%= data2[i].orderId %>" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+                                
+                            </td>
+                        </tr>
+                        <% } %>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>    
+
+<%- include('partials/_footer'); %>

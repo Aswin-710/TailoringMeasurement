@@ -1,0 +1,72 @@
+<%-  include('partials/_header'); %>
+<%-  include('partials/_navbar'); %>
+            <!-- Nav -->
+            <ul class="nav nav-tabs mt-4 overflow-x border-0">
+                <li class="nav-item ">
+                    <a href="/ %>" class="nav-link active">All files</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/blouse %>" class="nav-link font-regular">Blouse</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Chudi %>" class="nav-link font-regular">Chudi</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- Main -->
+<main class="py-6 bg-surface-secondary">
+    <div class="container-fluid">
+        <div class="card shadow border-0 mb-7">
+            <div class="card-header">
+                <h5 class="mb-0">Customer Details</h5>
+            </div>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card-body">
+                            <form action="/add" class="row g-3" method="POST">
+                                <div class="form-group col-md-2">
+                                    <label for="OrderId" class="form-label">OrderId</label>
+                                    <input type="text" name="OrderId"  class="form-control" autofocus>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" name="name" class="form-control" >
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="phone" class="form-label">Phone No</label>
+                                    <input type="text" name="phone" class="form-control">
+                                </div>
+                                <div class="form-group ">
+                                    <label for="address" class="form-label">Address</label>
+                                    <input type="text" name="address"  class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="bDate" class="form-label">Booking Date</label>
+                                    <input type="date" name="bDate"  class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="dDate" class="form-label">Delivery Date</label>
+                                    <input type="date" name="dDate" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="reqCloth" class="form-label">No. Of Cloths</label>
+                                    <input type="text" name="reqCloth" class="form-control">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">
+                                    save 
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<%- include('partials/_footer'); %>

@@ -1,0 +1,70 @@
+<%-  include('partials/_header'); %>
+<%-  include('partials/_navbar'); %>
+            <!-- Nav -->
+            <ul class="nav nav-tabs mt-4 overflow-x border-0">
+                <li class="nav-item ">
+                    <a href="/ %>" class="nav-link font-regular">All files</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/blouse %>" class="nav-link active">Blouse</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Chudi %>" class="nav-link font-regular">Chudi</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- Main -->
+<main class="py-6 bg-surface-secondary">
+    <div class="container-fluid">
+        <div class="card shadow border-0 mb-7">
+            <div class="card-header">
+                <h5 class="mb-0">Blouse Details</h5>
+            </div>
+            <form action="/add1" class="row g-3" method="POST">
+                <div class="form-group col-md-3">
+                    <input type="text" name="OrderId" placeholder="Order Id" class="form-control" autofocus>
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="lenght" placeholder="Length" class="form-control" >
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="chest" placeholder="Chest" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="shoulderfinish" placeholder="Shoulder Finish" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="slevelength" placeholder="Sleve Length" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="sleveround" placeholder="Sleve Round" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="middlehandround" placeholder="Middle Handround" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="frontneckheight" placeholder="Frontneck Height" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="backneckround" placeholder="Backneck Round" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="waistloose" placeholder="Waist Loose" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="frontdartpoint" placeholder="Front Dartpoint" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="fullshoulder" placeholder="Full Shoulder" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    save 
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<%- include('partials/_footer'); %>

@@ -1,0 +1,80 @@
+<%-  include('partials/_header'); %>
+<%-  include('partials/_navbar'); %>
+
+<!-- Main -->
+<main class="py-6 bg-surface-secondary">
+    <div class="container-fluid">
+        <div class="card shadow border-0 mb-7">
+            <div class="card-header">
+                <h5 class="mb-0">Edit chudi Details</h5>
+            </div>
+            <form action="/update2/<%= data2.orderId %>" class="row g-3" method="POST">
+                <div class="card-header">
+                    <h6>Top Size</h6>
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="OrderId" placeholder="Order Id" class="form-control" value="<%= data2.OrderId %>">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="height" placeholder="Height" class="form-control" value="<%= data2.height %>" >
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="frontpointcenter" placeholder="Front Pointcenter" class="form-control" value="<%= data2.frontpointcenter %>">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="bodyloose" placeholder="Bodyloose" class="form-control" value="<%= data2.bodyloose %>" >
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" name="hiploose" placeholder="Hiploose" class="form-control" value="<%= data2.hiploose %>">
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" name="firstlowhipheight" placeholder="Firstlow Hip Height" class="form-control" value="<%= data2.firstlowhipheight %>" >
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" name="firstlowhiploose" placeholder="Firstlow Hiploose" class="form-control" value="<%= data2.firstlowhiploose %>" >
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" name="bottomopenfromtop" placeholder="Bottom Open from Top" class="form-control" value="<%= data2.bottomopenfromtop %>" >
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" name="secondlowhiploose" placeholder="Secondlow Hiploose" class="form-control" value="<%= data2.secondlowhiploose %>" >
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" name="frontneckheight" placeholder="Front Neck Height" class="form-control" value="<%= data2.frontneckheight %>" >
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" name="backneckheight" placeholder="Backneck Height" class="form-control" value="<%= data2.backneckheight %>">
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" name="handheight" placeholder="Hand Height" class="form-control" value="<%= data2.handheight %>" >
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" name="middlehandloose" placeholder="Middlehand Loose" class="form-control" value="<%= data2.middlehandloose %>" >
+                </div>
+                <div class="card-header">
+                    <h6 class="mb-0">Pant Size</h6>
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" name="pantheight" placeholder="Pant Height" class="form-control" value="<%= data2.pantheight %>" >
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="seatloose" placeholder="Seat Loose" class="form-control" value="<%= data2.seatloose %>" >
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" name="bottomloose" placeholder="Bottom Loose" class="form-control" value="<%= data2.bottomloose %>" >
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="bodytokneeheight" placeholder="Body to KneeHeight" class="form-control" value="<%= data2.bodytokneeheight %>" >
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" name="kneeloose" placeholder="Knee Loose" class="form-control" value="<%= data2.kneeloose %>" >
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    save 
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<%- include('partials/_footer'); %>

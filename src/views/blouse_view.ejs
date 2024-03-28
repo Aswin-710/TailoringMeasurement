@@ -1,0 +1,100 @@
+<%-  include('partials/_header'); %>
+<%-  include('partials/_navbar'); %>
+            <!-- Nav -->
+            <ul class="nav nav-tabs mt-4 overflow-x border-0">
+                <li class="nav-item ">
+                    <a href="/ %>" class="nav-link font-regular">All files</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/blouseview %>" class="nav-link active">Blouse</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Chudiview %>" class="nav-link font-regular">Chudi</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- Main -->
+<main class="py-6 bg-surface-secondary">
+    <div class="container-fluid">
+        <div class="card shadow border-0 mb-7">
+            <div class="card-header">
+                <h5 class="mb-0">Chudi Details</h5>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover table-nowrap table-sm">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Order no.</th>
+                            <th scope="col">length</th>
+                            <th scope="col">chest</th>
+                            <th scope="col">shoulderfinish</th>
+                            <th scope="col">slevelength</th>
+                            <th scope="col">sleveround</th>
+                            <th scope="col">middlehandround</th>
+                            <th scope="col">frontneckheight</th>
+                            <th scope="col">backneckround</th>
+                            <th scope="col">waistloose</th>
+                            <th scope="col">frontdartpoint</th>
+                            <th scope="col">fullshoulder</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (data1) { %>
+                            <% for(var i = 0; i < data1.length; i++) { %>
+                        <tr>
+                            <td>
+                                <a class="text-heading font-semibold" href="#">
+                                    <%= data1[i].orderId %>
+                                </a>
+                            </td>
+                            <td>
+                                <%= data1[i].lenght %>
+                            </td>
+                            <td>
+                                <%= data1[i].chest %>
+                            </td>
+                            <td>
+                                <%= data1[i].shoulderfinish %>
+                            </td>
+                            <td>
+                                <%= data1[i].slevelength %>
+                            </td>
+                            <td>
+                                <%= data1[i].sleveround %>
+                            </td>
+                            <td>
+                                <%= data1[i].middlehandround %>
+                            </td>
+                            <td>
+                                <%= data1[i].frontneckheight %>
+                            </td>
+                            <td>
+                                <%= data1[i].backneckround %>
+                            </td>
+                            <td>
+                                <%= data1[i].waistloose %>
+                            </td>
+                            <td>
+                                <%= data1[i].frontdartpoint %>
+                            </td>
+                            <td>
+                                <%= data1[i].fullshoulder %>
+                            </td>
+                            <td class="text-end">
+                                <a href="/update1/<%= data1[i].orderId %>" class="btn btn-sm btn-neutral"><i class="bi bi-pencil"></i></a>
+                                <a href="/delete1/<%= data1[i].orderId %>" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+                            </td>
+                        </tr>
+                        <% } %>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('partials/_footer'); %>

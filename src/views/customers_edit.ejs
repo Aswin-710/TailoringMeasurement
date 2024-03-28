@@ -1,0 +1,50 @@
+<%- include ('partials/_header'); %>
+<%-  include('partials/_navbar'); %>
+
+<!-- Main -->
+<main class="py-6 bg-surface-secondary">
+    <div class="container-fluid">
+        <div class="card shadow border-0 mb-7">
+            <div class="card-header">
+                <h5 class="mb-0">Customer Edit</h5>
+            </div>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-5 offset-md-3 card">
+                        <div class="card-body">
+                            <form action="/update/<%= data.id %>" method="POST">
+                                <div class="form-group">
+                                    <input type="text" name="OrderId" placeholder="OrederId" class="form-control" value="<%= data.OrderId %>">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Name" class="form-control" value="<%= data.name %>">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="phone" placeholder="Phone" class="form-control" value="<%= data.phone %>">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="address" placeholder="Address" class="form-control" value="<%= data.address %>">
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" name="bDate" placeholder="Booking Date" class="form-control" value="<%= data.bDate %>">
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" name="dDate" placeholder="Delivery Date" class="form-control" value="<%= data.dDate %>">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="reqCloth" placeholder="Required Cloth (in mts)" class="form-control" value="<%= data.reqCloth %>">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">
+                                    save customer
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include ('partials/_footer'); %>

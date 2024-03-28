@@ -1,0 +1,81 @@
+<%-  include('partials/_header'); %>
+<%-  include('partials/_navbar'); %>
+            <!-- Nav -->
+            <ul class="nav nav-tabs mt-4 overflow-x border-0">
+                <li class="nav-item ">
+                    <a href="/ %>" class="nav-link active">All files</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/blouseview %>" class="nav-link font-regular">Blouse</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Chudiview %>" class="nav-link font-regular">Chudi</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- Main -->
+<main class="py-6 bg-surface-secondary">
+    <div class="container-fluid">
+        <div class="card shadow border-0 mb-7">
+            <div class="card-header">
+                <h5 class="mb-0">Dashboard</h5>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover table-nowrap">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Order no.</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Booking Date</th>
+                            <th scope="col">Delivery Date</th>
+                            <th scope="col">No. Of Cloths</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (data) { %>
+                            <% for(var i = 0; i < data.length; i++) { %>
+                        <tr>
+                            <td>
+                                <a class="text-heading font-semibold" href="#">
+                                    <%= data[i].orderId %>
+                                </a>
+                            </td>
+                            <td>
+                                <%= data[i].name %>
+                            </td>
+                            <td>
+                                <%= data[i].phone %>
+                            </td>
+                            <td>
+                                <%= data[i].address %>
+                            </td>
+                            <td>
+                                <%= data[i].bDate %>
+                            </td>
+                            <td>
+                                <%= data[i].dDate %>
+                            </td>
+                            <td>
+                                <%= data[i].reqCloth %>
+                            </td>
+
+                            <td class="text-end">
+                                <a href="/update/<%= data[i].id %>" class="btn btn-sm btn-neutral"><i class="bi bi-pencil"></i></a>
+                                <a href="/delete/<%= data[i].id %>" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+                                
+                            </td>
+                        </tr>
+                        <% } %>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+<%- include('partials/_footer'); %>
