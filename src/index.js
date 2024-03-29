@@ -29,11 +29,11 @@ app.use(bodyParser.json());
 // middlewares
 app.use(morgan('dev'));
 app.use(myConnection(mysql, {
-    host: process.env.DB_HOST,
-    user: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT, // Corrected
-    database: process.env.DB_DBNAME
+    host: process.env.MYSQL_ADDON_HOST,
+    user: process.env.MYSQL_ADDON_USER,
+    password: process.env.MYSQL_ADDON_PASSWORD,
+    port: process.env.MYSQL_ADDON_PORT, // Corrected
+    database: process.env.MYSQL_ADDON_DB
 }, 'single'));
 app.use(express.urlencoded({extended: false}));
 
@@ -44,7 +44,7 @@ app.use('/', customerRoutes);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // starting the server
-const PORT = process.env.DB_PORT || 3000;
+const PORT = process.env.MYSQL_ADDON_PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
